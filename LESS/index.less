@@ -67,6 +67,14 @@ h1, h2, h3, h4, h5 {
 }
 
 
+// COLORS
+@woodland : #4C6A2D;
+@donkey-brown: #A39280;
+@lynch: #78849E;
+@ebony-clay: #2A2E43;
+
+
+
 
 header {
     // border: solid red;
@@ -97,8 +105,12 @@ header {
     // border: solid red;
     display: flex;
     justify-content: center;
-    height: 60%;
+
     padding: 15px 0;
+
+    img {
+        height: 500px;
+    }
 }
 
 .cta-section {
@@ -121,16 +133,21 @@ header {
     }
 
     .home-cta-button {
-        border: solid black;
+        font-weight: bold;
+        letter-spacing: .1rem;
+        background-color: @woodland;
         border-radius: 1.5rem;
         padding: 15px 25px;
         margin: 15px auto;
         width: 200px;
         text-align: center;
+        &:hover {
+            background-color: @donkey-brown;
+        }
 
         a {
             text-decoration: none;
-            color: black;
+            color: white;
         }
     }
 
@@ -145,18 +162,85 @@ header {
 }
 
 .tabs-section {
-    border: solid blue;
+    display: flex;
+    justify-content: center;
+    // border: solid blue;
+    margin: 25px 15px 0 0;
 
     .tab {
-        border: solid pink;
+        width: 250px;
+        padding: 20px 0px;
+        margin: 0 15px;
+        font-weight: bold;
+        letter-spacing: .2rem;
+        // border: solid pink;
+        text-align: center;
+        background: @ebony-clay;
+        color: white;
+
+        &:hover {
+            text-decoration: underline;
+            background: @donkey-brown;
+        }
+
+
     }
 
 }
 
 .card {
-    border: solid red;
+    // border: solid red;
+    
+    .card-content {
+        display: flex;
+        
+        border: solid black;
+        border-radius: 2rem;
+        padding: 25px;
+        margin: 25px;
+        
+        img {
+            padding: 25px;
+        }
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+    p {
+        font-size: 1rem;
+        line-height: 1.5;
+        padding: 10px 0;
+    }
+
+    img {
+        width: 500px;
+        border-radius: 1.5rem
+    }
+
+    .card-button {
+        font-weight: bold;
+        letter-spacing: .1rem;
+
+        background-color: @woodland;
+        border-radius: 1.5rem;
+        padding: 15px 0;
+        margin: 15px auto;
+        width: 175px;
+        text-align: center;
+        &:hover {
+            background: @donkey-brown;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    }
+
+
 }
 
-.footer {
-    border: solid purple;
-}
+// .footer {
+//     // border: solid purple;
+// }
