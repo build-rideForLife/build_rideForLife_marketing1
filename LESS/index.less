@@ -56,6 +56,8 @@ table {
 html, body {
     height: 100%;
     font-family: 'Open Sans', sans-serif;
+    width: 1000px;
+    margin: 0 auto;
 }
 
 h1, h2, h3, h4, h5 {
@@ -64,64 +66,91 @@ h1, h2, h3, h4, h5 {
     margin-bottom: 15px;
 }
 
+
+
 header {
     // border: solid red;
     display: flex;
-    align-items: center;
-    // margin: 25px;
-    padding: 25px;
-
-    .logo-image {
-        padding: 0 25px;
-    }
 
     .logo-text {
-        font-size: 4rem;
+        font-size: 3rem;
+        margin: auto;
         // border: solid blue;
-        padding: 0 25px;
     }
 
     nav {
         // border: solid green;
-        width: 60%;
-        text-align: right;
+        margin: auto;
+        padding: 0 10px 0 60px;
 
         a {
             // border: solid pink;
-            padding: 0 25px;
-            font-size: 1.5rem;
+            padding: 0 15px;
+            font-size: 1.25rem;
             color: black;
             text-decoration: none;
         }
     }
-
 }
 
 .home-banner {
     // border: solid red;
     display: flex;
     justify-content: center;
-    height: 65%;
+    height: 60%;
+    padding: 15px 0;
 }
 
 .cta-section {
-    border: solid green;
-
-    .home-cta-button {
-        border: solid blue;
-    }
+    // border: solid green;
+    display: flex;
+    padding: 15px;
 
     .cta-text {
-        border: solid orange;
+        // border: solid orange;
+        padding: 20px;
+
+        h2 {
+            font-size: 1.5rem;
+        }
+        p {
+            font-size: 1rem;
+            line-height: 1.5;
+            padding: 10px 0;
+        }
+    }
+
+    .home-cta-button {
+        border: solid black;
+        border-radius: 1.5rem;
+        padding: 15px 25px;
+        margin: 15px auto;
+        width: 200px;
+        text-align: center;
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
     }
 
     .cta-image {
-        border: solid red;
+        // border: solid red;
+
+        img {
+            height: 450px;
+            border-radius: 1.5rem;
+        }
     }
 }
 
 .tabs-section {
     border: solid blue;
+
+    .tab {
+        border: solid pink;
+    }
+
 }
 
 .card {
