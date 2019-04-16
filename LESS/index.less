@@ -295,21 +295,20 @@ h1, h2, h3, h4, h5 {
 
 
 @media @mobile {
-    #test {
+    .container {
         width: 100%;
-        // background: pink;
 
         header {
             width: 100%;
             display: block;
     
-    
             .logo-image {
                 display: none;
             }
-        
+
             .logo-text {
                 text-align: center;
+                font-size: 2rem;
             }
         
             nav {
@@ -319,7 +318,7 @@ h1, h2, h3, h4, h5 {
                 a {
                     display: block;
                     width: 100%;
-                    font-size: 1.5rem;
+                    font-size: 1.25rem;
                     text-align: center;
                     padding: 10px 0;
                     border-top: 1px solid white;
@@ -340,18 +339,30 @@ h1, h2, h3, h4, h5 {
             display: block;
         }
 
+        .tabs-section {
+            margin: 0 auto;
+            
+            .tab {
+                font-size: 0.85rem;
+                padding: 15px 0;
+            }
+        }
+
         .card-content {
             display: block;
 
             img {
                 margin: 0 auto;
                 width: 325px;
-                // height: 225px;
             }
         }
 
+        .footer-section {
+            display: block;
 
-
-
+            nav a {
+                display: none;
+            }
+        }
     }
 }    

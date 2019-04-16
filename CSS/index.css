@@ -305,45 +305,59 @@ h5 {
   text-decoration: none;
 }
 @media (max-width: 600px) {
-  #test {
+  .container {
     width: 100%;
   }
-  #test header {
+  .container header {
     width: 100%;
     display: block;
   }
-  #test header .logo-image {
+  .container header .logo-image {
     display: none;
   }
-  #test header .logo-text {
+  .container header .logo-text {
     text-align: center;
+    font-size: 2rem;
   }
-  #test header nav {
+  .container header nav {
     padding: 0;
     margin: 0;
   }
-  #test header nav a {
+  .container header nav a {
     display: block;
     width: 100%;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     text-align: center;
     padding: 10px 0;
     border-top: 1px solid white;
   }
-  #test .home-banner img {
+  .container .home-banner img {
     width: auto;
     height: 225px;
     padding-top: 15px;
     border-radius: 2rem;
   }
-  #test .cta-section {
+  .container .cta-section {
     display: block;
   }
-  #test .card-content {
+  .container .tabs-section {
+    margin: 0 auto;
+  }
+  .container .tabs-section .tab {
+    font-size: 0.85rem;
+    padding: 15px 0;
+  }
+  .container .card-content {
     display: block;
   }
-  #test .card-content img {
+  .container .card-content img {
     margin: 0 auto;
     width: 325px;
+  }
+  .container .footer-section {
+    display: block;
+  }
+  .container .footer-section nav a {
+    display: none;
   }
 }
