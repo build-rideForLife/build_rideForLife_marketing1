@@ -119,7 +119,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 table {
@@ -133,7 +133,7 @@ table {
 html,
 body {
   height: 100%;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   width: 100%;
   margin: 0 auto;
 }
@@ -142,7 +142,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: 'Merriweather Sans', sans-serif;
+  font-family: "Merriweather Sans", sans-serif;
   letter-spacing: 1px;
   margin-bottom: 15px;
 }
@@ -151,7 +151,7 @@ h5 {
   padding: 15px 0;
 }
 .header-section header {
-  width: 1000px;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   color: white;
@@ -171,12 +171,12 @@ h5 {
   text-decoration: none;
 }
 .home-banner {
-  border-top: 2px dashed #A39280;
+  border-top: 2px dashed #a39280;
   display: flex;
   justify-content: center;
 }
 .home-banner img {
-  width: 100%;
+  width: 950px;
   height: auto;
 }
 .cta-section {
@@ -207,7 +207,7 @@ h5 {
   text-align: center;
 }
 .cta-section .home-cta-button:hover {
-  background-color: #A39280;
+  background-color: #a39280;
 }
 .cta-section .home-cta-button a {
   text-decoration: none;
@@ -229,12 +229,12 @@ h5 {
   font-weight: bold;
   letter-spacing: 0.2rem;
   text-align: center;
-  background: #2A2E43;
+  background: #2a2e43;
   color: white;
 }
 .tabs-section .tab:hover {
   text-decoration: underline;
-  background: #A39280;
+  background: #a39280;
 }
 .card .card-content {
   display: flex;
@@ -246,6 +246,8 @@ h5 {
 }
 .card .card-content img {
   padding: 25px;
+  width: 500px;
+  border-radius: 1.5rem;
 }
 .card h2 {
   font-size: 1.5rem;
@@ -254,10 +256,6 @@ h5 {
   font-size: 1rem;
   line-height: 1.5;
   padding: 10px 0;
-}
-.card img {
-  width: 500px;
-  border-radius: 1.5rem;
 }
 .card .card-button {
   font-weight: bold;
@@ -270,7 +268,7 @@ h5 {
   text-align: center;
 }
 .card .card-button:hover {
-  background: #A39280;
+  background: #a39280;
 }
 .card .card-button a {
   text-decoration: none;
@@ -282,11 +280,12 @@ h5 {
   display: flex;
   color: white;
   padding: 15px 0;
-  border-top: 2px dashed #A39280;
+  border-top: 2px dashed #a39280;
 }
 .footer-section footer {
-  width: 1000px;
+  width: 100%;
   margin: 0 auto;
+  padding-left: 15px;
 }
 .footer-section footer .footer-nav {
   display: flex;
@@ -304,9 +303,16 @@ h5 {
   color: white;
   text-decoration: none;
 }
-@media (max-width: 600px) {
+@media (min-width: 800px) and (max-width: 1000px) {
+  background-color: red;
+}
+@media (max-width: 500px) and (max-width: 800px) {
   .container {
-    width: 100%;
+    width: 500px;
+  }
+  .container .header-section {
+    margin: 0;
+    padding: 15px 0 0;
   }
   .container header {
     width: 100%;
@@ -331,11 +337,18 @@ h5 {
     padding: 10px 0;
     border-top: 1px solid white;
   }
+  .container header nav a:hover {
+    background: #a39280;
+  }
+  .container .home-banner {
+    width: 100%;
+  }
   .container .home-banner img {
     width: auto;
     height: 225px;
     padding-top: 15px;
     border-radius: 2rem;
+    margin: 0 auto;
   }
   .container .cta-section {
     display: block;
@@ -344,15 +357,17 @@ h5 {
     margin: 0 auto;
   }
   .container .tabs-section .tab {
+    text-decoration: underline;
     font-size: 0.85rem;
-    padding: 15px 0;
+    padding: 12px;
+    margin: 0;
   }
   .container .card-content {
     display: block;
   }
   .container .card-content img {
     margin: 0 auto;
-    width: 325px;
+    width: 100%;
   }
   .container .footer-section {
     display: block;
