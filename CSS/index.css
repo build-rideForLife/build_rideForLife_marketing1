@@ -176,7 +176,8 @@ h5 {
   justify-content: center;
 }
 .home-banner img {
-  height: 500px;
+  width: 100%;
+  height: auto;
 }
 .cta-section {
   display: flex;
@@ -302,4 +303,38 @@ h5 {
   font-size: 1.1rem;
   color: white;
   text-decoration: none;
+}
+@media (max-width: 600px) {
+  #test {
+    width: 100%;
+  }
+  #test header {
+    width: 100%;
+    display: block;
+  }
+  #test header .logo-image {
+    display: none;
+  }
+  #test header .logo-text {
+    text-align: center;
+  }
+  #test header nav {
+    padding: 0;
+    margin: 0;
+  }
+  #test header nav a {
+    display: block;
+    width: 100%;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid white;
+  }
+  #test .home-banner img {
+    width: auto;
+    height: 225px;
+  }
+  #test .cta-section {
+    display: block;
+  }
 }

@@ -59,6 +59,8 @@ html, body {
     // width: 1000px;
     width: 100%;
     margin: 0 auto;
+
+
 }
 
 h1, h2, h3, h4, h5 {
@@ -74,11 +76,14 @@ h1, h2, h3, h4, h5 {
 @lynch: #78849E;
 @ebony-clay: #2A2E43;
 
+//ESCAPED VALUES
+@mobile: ~"(max-width: 600px)";
 
 
 .header-section {
     background: @woodland;
     padding: 15px 0;
+
 
     header {
         // border: solid red;
@@ -86,6 +91,12 @@ h1, h2, h3, h4, h5 {
         margin: 0 auto;
         display: flex;
         color: white;
+
+
+        // @media @mobile {
+        //     border: solid pink;
+        //     background: red;
+        // }
     
         .logo-text {
             font-size: 3rem;
@@ -117,7 +128,8 @@ h1, h2, h3, h4, h5 {
     // padding: 15px 0;
 
     img {
-        height: 500px;
+        width: 100%;
+        height: auto;
     }
 }
 
@@ -278,3 +290,60 @@ h1, h2, h3, h4, h5 {
         }
     }
 }
+
+
+// /* ************ MOBILE STYLES 500px ************ */
+
+
+@media @mobile {
+    #test {
+        width: 100%;
+        // background: pink;
+
+        header {
+            width: 100%;
+            display: block;
+    
+    
+            .logo-image {
+                display: none;
+            }
+        
+            .logo-text {
+                text-align: center;
+            }
+        
+            nav {
+                padding: 0;
+                margin: 0;
+        
+                a {
+                    display: block;
+                    width: 100%;
+                    font-size: 1.5rem;
+                    text-align: center;
+                    padding: 10px 0;
+                    border-top: 1px solid white;
+                }
+            }
+        }
+
+        .home-banner {
+
+            img {
+                width: auto;
+                height: 225px;
+            }
+        }    
+
+
+        .cta-section {
+            display: block;
+        }
+
+
+
+
+
+    }
+}    
