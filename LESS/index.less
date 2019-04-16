@@ -56,7 +56,8 @@ table {
 html, body {
     height: 100%;
     font-family: 'Open Sans', sans-serif;
-    width: 1000px;
+    // width: 1000px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -75,38 +76,45 @@ h1, h2, h3, h4, h5 {
 
 
 
+.header-section {
+    background: @woodland;
+    padding: 15px 0;
 
-header {
-    // border: solid red;
-    display: flex;
-
-    .logo-text {
-        font-size: 3rem;
-        margin: auto;
-        // border: solid blue;
-    }
-
-    nav {
-        // border: solid green;
-        margin: auto;
-        padding: 0 10px 0 60px;
-
-        a {
-            // border: solid pink;
-            padding: 0 15px;
-            font-size: 1.25rem;
-            color: black;
-            text-decoration: none;
+    header {
+        // border: solid red;
+        width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        color: white;
+    
+        .logo-text {
+            font-size: 3rem;
+            margin: auto;
+            // border: solid blue;
+        }
+    
+        nav {
+            // border: solid green;
+            margin: auto;
+            padding: 0 10px 0 60px;
+    
+            a {
+                // border: solid pink;
+                padding: 0 15px;
+                font-size: 1.1rem;
+                color: white;
+                text-decoration: none;
+            }
         }
     }
 }
 
 .home-banner {
-    // border: solid red;
+    border-top: 2px dashed @donkey-brown;
     display: flex;
     justify-content: center;
 
-    padding: 15px 0;
+    // padding: 15px 0;
 
     img {
         height: 500px;
@@ -117,6 +125,8 @@ header {
     // border: solid green;
     display: flex;
     padding: 15px;
+    width: 85%;
+    margin: 0 auto;
 
     .cta-text {
         // border: solid orange;
@@ -141,6 +151,7 @@ header {
         margin: 15px auto;
         width: 200px;
         text-align: center;
+
         &:hover {
             background-color: @donkey-brown;
         }
@@ -152,8 +163,6 @@ header {
     }
 
     .cta-image {
-        // border: solid red;
-
         img {
             height: 450px;
             border-radius: 1.5rem;
@@ -164,7 +173,6 @@ header {
 .tabs-section {
     display: flex;
     justify-content: center;
-    // border: solid blue;
     margin: 25px 15px 0 0;
 
     .tab {
@@ -173,7 +181,6 @@ header {
         margin: 0 15px;
         font-weight: bold;
         letter-spacing: .2rem;
-        // border: solid pink;
         text-align: center;
         background: @ebony-clay;
         color: white;
@@ -182,22 +189,18 @@ header {
             text-decoration: underline;
             background: @donkey-brown;
         }
-
-
     }
-
 }
 
 .card {
-    // border: solid red;
     
     .card-content {
         display: flex;
-        
+        width: 75%;
         border: solid black;
         border-radius: 2rem;
         padding: 25px;
-        margin: 25px;
+        margin: 25px auto;
         
         img {
             padding: 25px;
@@ -207,6 +210,7 @@ header {
     h2 {
         font-size: 1.5rem;
     }
+
     p {
         font-size: 1rem;
         line-height: 1.5;
@@ -221,13 +225,13 @@ header {
     .card-button {
         font-weight: bold;
         letter-spacing: .1rem;
-
         background-color: @woodland;
         border-radius: 1.5rem;
         padding: 15px 0;
         margin: 15px auto;
         width: 175px;
         text-align: center;
+
         &:hover {
             background: @donkey-brown;
         }
@@ -238,9 +242,39 @@ header {
         }
     }
 
-
 }
 
-// .footer {
-//     // border: solid purple;
-// }
+
+.footer-section {
+    background: @woodland;
+    margin: 0 auto;
+    display: flex;
+    color: white;
+    padding: 15px 0;
+    border-top: 2px dashed @donkey-brown;
+
+    footer {
+        width: 1000px;
+        margin: 0 auto;
+
+        .footer-nav {
+            display: flex;
+
+            .footer-logo-text {
+                font-size: 2rem;
+            }
+    
+         nav {
+            margin: auto 0;
+            padding: 0 10px 0 60px;
+        
+            a {
+                padding: 0 15px;
+                font-size: 1.1rem;
+                color: white;
+                text-decoration: none;
+                }
+            }
+        }
+    }
+}

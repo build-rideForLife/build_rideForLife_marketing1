@@ -134,7 +134,7 @@ html,
 body {
   height: 100%;
   font-family: 'Open Sans', sans-serif;
-  width: 1000px;
+  width: 100%;
   margin: 0 auto;
 }
 h1,
@@ -146,27 +146,34 @@ h5 {
   letter-spacing: 1px;
   margin-bottom: 15px;
 }
-header {
-  display: flex;
+.header-section {
+  background: #4C6A2D;
+  padding: 15px 0;
 }
-header .logo-text {
+.header-section header {
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  color: white;
+}
+.header-section header .logo-text {
   font-size: 3rem;
   margin: auto;
 }
-header nav {
+.header-section header nav {
   margin: auto;
   padding: 0 10px 0 60px;
 }
-header nav a {
+.header-section header nav a {
   padding: 0 15px;
-  font-size: 1.25rem;
-  color: black;
+  font-size: 1.1rem;
+  color: white;
   text-decoration: none;
 }
 .home-banner {
+  border-top: 2px dashed #A39280;
   display: flex;
   justify-content: center;
-  padding: 15px 0;
 }
 .home-banner img {
   height: 500px;
@@ -174,6 +181,8 @@ header nav a {
 .cta-section {
   display: flex;
   padding: 15px;
+  width: 85%;
+  margin: 0 auto;
 }
 .cta-section .cta-text {
   padding: 20px;
@@ -228,10 +237,11 @@ header nav a {
 }
 .card .card-content {
   display: flex;
+  width: 75%;
   border: solid black;
   border-radius: 2rem;
   padding: 25px;
-  margin: 25px;
+  margin: 25px auto;
 }
 .card .card-content img {
   padding: 25px;
@@ -264,4 +274,32 @@ header nav a {
 .card .card-button a {
   text-decoration: none;
   color: white;
+}
+.footer-section {
+  background: #4C6A2D;
+  margin: 0 auto;
+  display: flex;
+  color: white;
+  padding: 15px 0;
+  border-top: 2px dashed #A39280;
+}
+.footer-section footer {
+  width: 1000px;
+  margin: 0 auto;
+}
+.footer-section footer .footer-nav {
+  display: flex;
+}
+.footer-section footer .footer-nav .footer-logo-text {
+  font-size: 2rem;
+}
+.footer-section footer .footer-nav nav {
+  margin: auto 0;
+  padding: 0 10px 0 60px;
+}
+.footer-section footer .footer-nav nav a {
+  padding: 0 15px;
+  font-size: 1.1rem;
+  color: white;
+  text-decoration: none;
 }
