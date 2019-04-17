@@ -146,6 +146,17 @@ h5 {
   letter-spacing: 1px;
   margin-bottom: 15px;
 }
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+body {
+  animation: pop-in;
+}
 .header-section {
   background: #4C6A2D;
   padding: 15px 0;
@@ -176,8 +187,9 @@ h5 {
   justify-content: center;
 }
 .home-banner img {
-  width: 950px;
+  width: 100%;
   height: auto;
+  padding-bottom: 15px;
 }
 .cta-section {
   display: flex;
@@ -341,13 +353,12 @@ h5 {
     background: #a39280;
   }
   .container .home-banner {
+    margin: 0;
     width: 100%;
   }
   .container .home-banner img {
     width: auto;
-    height: 225px;
-    padding-top: 15px;
-    border-radius: 2rem;
+    height: 250px;
     margin: 0 auto;
   }
   .container .cta-section {

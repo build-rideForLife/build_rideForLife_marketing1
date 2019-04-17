@@ -163,6 +163,25 @@ h5 {
 @mobile: ~"(max-width: 500px) and (max-width: 800px)";
 @tablet: ~"(min-width: 800px) and (max-width: 1000px)";
 
+@keyframes pop-in {
+    0% {
+      opacity: 0;
+    //   transform: translateY(-4rem) scale(.8);
+    }
+    100% {
+      opacity: 1;
+    //   transform: none;
+    }
+  }
+  
+  body {
+      animation:  pop-in;
+  }
+
+
+
+
+
 .header-section {
   background: @woodland;
   padding: 15px 0;
@@ -202,8 +221,9 @@ h5 {
   justify-content: center;
 
   img {
-    width: 950px;
+    width: 100%;
     height: auto;
+    padding-bottom: 15px;
   }
 }
 
@@ -414,12 +434,11 @@ h5 {
     }
 
     .home-banner {
+        margin: 0;
         width: 100%;
       img {
         width: auto;
-        height: 225px;
-        padding-top: 15px;
-        border-radius: 2rem;
+        height: 250px;
         margin: 0 auto;
       }
     }
