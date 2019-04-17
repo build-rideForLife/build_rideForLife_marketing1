@@ -170,6 +170,9 @@ h5 {
   color: white;
   text-decoration: none;
 }
+.header-section header nav a:hover {
+  color: #a39280;
+}
 .home-banner {
   border-top: 2px dashed #a39280;
   display: flex;
@@ -236,6 +239,7 @@ h5 {
 .tabs-section .tab:hover {
   text-decoration: underline;
   background: #a39280;
+  cursor: pointer;
 }
 .card-hidden {
   display: none;
@@ -290,6 +294,7 @@ h5 {
   width: 100%;
   margin: 0 auto;
   padding-left: 15px;
+  line-height: 1.5rem;
 }
 .footer-section footer .footer-nav {
   display: flex;
