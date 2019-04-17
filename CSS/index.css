@@ -146,17 +146,6 @@ h5 {
   letter-spacing: 1px;
   margin-bottom: 15px;
 }
-@keyframes pop-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-body {
-  animation: pop-in;
-}
 .header-section {
   background: #4C6A2D;
   padding: 15px 0;
@@ -247,6 +236,9 @@ body {
 .tabs-section .tab:hover {
   text-decoration: underline;
   background: #a39280;
+}
+.card-hidden {
+  display: none;
 }
 .card .card-content {
   display: flex;
