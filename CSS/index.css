@@ -364,6 +364,11 @@ address {
   .container .cta-section {
     display: block;
   }
+  .container #contact-image img {
+    width: 400px;
+    height: auto;
+    margin: 0 auto;
+  }
   .container .tabs-section {
     margin: 0 auto;
   }
