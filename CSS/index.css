@@ -148,7 +148,7 @@ h5 {
 }
 .header-section {
   background: #4C6A2D;
-  padding: 15px 0;
+  padding: 15px 50px;
 }
 .header-section header {
   width: 100%;
@@ -179,7 +179,7 @@ h5 {
   justify-content: center;
 }
 .home-banner img {
-  width: 100%;
+  width: 90%;
   height: auto;
   padding-bottom: 15px;
 }
@@ -240,6 +240,9 @@ h5 {
   text-decoration: underline;
   background: #a39280;
   cursor: pointer;
+}
+address {
+  line-height: 1.5rem;
 }
 .card-hidden {
   display: none;
