@@ -159,19 +159,47 @@ h5 {
 @ebony-clay: #2a2e43;
 
 //ESCAPED VALUES
-// @mobile: ~"(min-width: 500px) and (max-width: 800px)";
 @mobile: ~"(max-width: 500px) and (max-width: 800px)";
-@tablet: ~"(min-width: 800px) and (max-width: 1000px)";
+// @tablet: ~"(min-width: 800px) and (max-width: 1000px)";
 
+
+//LINK ANIMATIONS
+@keyframes pulse {
+  0% {
+    background-color: @donkey-brown;
+  }
+  100% {
+    background-color: @woodland;
+  }
+}
+
+@keyframes pulseText {
+    0% {
+      color: @donkey-brown;
+    }
+    100% {
+      color: white;
+    }
+  }
+
+@keyframes pulse2 {
+    0% {
+      background-color: @donkey-brown;
+    }
+    100% {
+      background-color: @ebony-clay;
+    }
+  }
+
+
+//STYLES BEGIN HERE  
 
 .header-section {
   background: @woodland;
   padding: 15px 50px;
-  border-bottom:2px dashed @donkey-brown;
-
+  border-bottom: 2px dashed @donkey-brown;
 
   header {
-    // border: solid red;
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -187,12 +215,15 @@ h5 {
       padding: 0 10px 0 60px;
 
       a {
-        padding: 0 15px;
-        font-size: 1.25rem;
+        width: 200px;
+        padding: 10px 15px;
+        font-size: 1.1rem;
         color: white;
         text-decoration: none;
+        font-weight: bold;
+        letter-spacing: 0.05rem;
         &:hover {
-            color: @donkey-brown;
+            animation: pulseText 2s;
         }
       }
     }
@@ -240,7 +271,7 @@ h5 {
     text-align: center;
 
     &:hover {
-      background-color: @donkey-brown;
+      animation: pulse 2s;
     }
 
     a {
@@ -274,31 +305,21 @@ h5 {
 
     &:hover {
       text-decoration: underline;
-      background: @donkey-brown;
+      animation: pulse2 2s;
       cursor: pointer;
     }
   }
 }
 
 address {
-    line-height: 1.5rem;
+  line-height: 1.5rem;
 }
-
-// #card {
-//     display: none;
-// }
-
-// .card-selected {
-//     display: block;
-// }
 
 .info-card {
-    
 }
 
-
 .card-hidden {
-    display: none;
+  display: none;
 }
 
 .card {
@@ -338,7 +359,7 @@ address {
     text-align: center;
 
     &:hover {
-      background: @donkey-brown;
+      animation: pulse 2s;
     }
 
     a {
@@ -375,81 +396,18 @@ address {
 
         a {
           padding: 0 15px;
+          font-weight: bold;
           font-size: 1.1rem;
           color: white;
           text-decoration: none;
+          &:hover {
+              animation: pulseText 1s;
+          }
         }
       }
     }
   }
 }
-
-
-// @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-// @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-// @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-
-
-// #logo-animation {
-//     // background: blue;
-//     opacity:0;  /* make things invisible upon start */
-//     -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
-//     -moz-animation:fadeIn ease-in 1;
-//     animation:fadeIn ease-in 1;
-  
-//     // -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
-//     // -moz-animation-fill-mode:forwards;
-//     // animation-fill-mode:forwards;
-  
-//     -webkit-animation-duration:2s;
-//     -moz-animation-duration:2s;
-//     animation-duration:2s;
-// }
-
-
-
-// .fade-in {
-//   opacity:0;  /* make things invisible upon start */
-//   -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
-//   -moz-animation:fadeIn ease-in 1;
-//   animation:fadeIn ease-in 1;
-
-//   -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
-//   -moz-animation-fill-mode:forwards;
-//   animation-fill-mode:forwards;
-
-//   -webkit-animation-duration:1s;
-//   -moz-animation-duration:1s;
-//   animation-duration:1s;
-// }
-
-// #fade-in-card {
-//   -webkit-animation-delay: 0.7s;
-//   -moz-animation-delay: 0.7s;
-//   animation-delay: 0.7s;
-// }
-
-// .fade-in.two {
-//   -webkit-animation-delay: 1.2s;
-//   -moz-animation-delay:1.2s;
-//   animation-delay: 1.2s;
-// }
-
-// .fade-in.three {
-//   -webkit-animation-delay: 1.6s;
-//   -moz-animation-delay: 1.6s;
-//   animation-delay: 1.6s;
-// }
-
-
-// /* ************ TABLET STYLES 800px ************ */
-
-
-@media @tablet {
-    background-color: red;
-}
-
-
 
 // /* ************ MOBILE STYLES 500px ************ */
 
@@ -458,8 +416,8 @@ address {
     width: 500px;
 
     .header-section {
-        margin: 0;
-        padding: 15px 0 0;
+      margin: 0;
+      padding: 15px 0 0;
     }
 
     header {
@@ -482,22 +440,18 @@ address {
         a {
           display: block;
           width: 100%;
-          font-size: 1.25rem;
+          font-size: 1rem;
           text-align: center;
           padding: 10px 0;
+          border-radius: 0;
           border-top: 1px solid white;
-
-          &:hover {
-              background: @donkey-brown;
-              color: white;
-          }
         }
       }
     }
 
     .home-banner {
-        margin: 0;
-        width: 100%;
+      margin: 0;
+      width: 100%;
       img {
         width: auto;
         height: 250px;
@@ -509,14 +463,12 @@ address {
       display: block;
     }
 
-    #contact-image {
-
-        img {
-            width: 400px;
-            height: auto;
-            margin: 0 auto;
-        }
-
+    .contact-image {
+      img {
+        width: 400px;
+        height: auto;
+        margin: 0 auto;
+      }
     }
 
     .tabs-section {
@@ -541,11 +493,9 @@ address {
 
     .footer-section {
       display: block;
-
       nav a {
         display: none;
       }
     }
   }
 }
-
