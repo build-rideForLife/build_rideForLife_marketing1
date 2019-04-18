@@ -162,8 +162,7 @@ h5 {
 @mobile: ~"(max-width: 500px) and (max-width: 800px)";
 // @tablet: ~"(min-width: 800px) and (max-width: 1000px)";
 
-
-//LINK ANIMATIONS
+//LINK/BUTTON ANIMATIONS
 @keyframes pulse {
   0% {
     background-color: @donkey-brown;
@@ -174,25 +173,38 @@ h5 {
 }
 
 @keyframes pulseText {
-    0% {
-      color: @donkey-brown;
-    }
-    100% {
-      color: white;
-    }
+  0% {
+    color: @donkey-brown;
   }
+  100% {
+    color: white;
+  }
+}
 
 @keyframes pulse2 {
-    0% {
-      background-color: @donkey-brown;
-    }
-    100% {
-      background-color: @ebony-clay;
-    }
+  0% {
+    background-color: @donkey-brown;
   }
+  100% {
+    background-color: @ebony-clay;
+  }
+}
 
+//PAGE ANIMATIONS
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
-//STYLES BEGIN HERE  
+body {
+  animation: fadein 0.5s;
+}
+
+//MAIN STYLES BEGIN HERE
 
 .header-section {
   background: @woodland;
@@ -223,7 +235,7 @@ h5 {
         font-weight: bold;
         letter-spacing: 0.05rem;
         &:hover {
-            animation: pulseText 2s;
+          animation: pulseText 2s;
         }
       }
     }
@@ -324,6 +336,7 @@ address {
 
 .card {
   .card-content {
+    animation: fadein 1s;
     display: flex;
     width: 75%;
     border: solid black;
@@ -401,7 +414,7 @@ address {
           color: white;
           text-decoration: none;
           &:hover {
-              animation: pulseText 1s;
+            animation: pulseText 1s;
           }
         }
       }

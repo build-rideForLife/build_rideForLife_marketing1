@@ -170,6 +170,17 @@ h5 {
     background-color: #2a2e43;
   }
 }
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+body {
+  animation: fadein 0.5s;
+}
 .header-section {
   background: #4C6A2D;
   padding: 15px 50px;
@@ -275,6 +286,7 @@ address {
   display: none;
 }
 .card .card-content {
+  animation: fadein 1s;
   display: flex;
   width: 75%;
   border: solid black;
