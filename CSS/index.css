@@ -1,0 +1,432 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  font-family: "Open Sans", sans-serif;
+  width: 100%;
+  margin: 0 auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Fjalla One", sans-serif;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+@keyframes pulse {
+  0% {
+    background-color: #a39280;
+  }
+  100% {
+    background-color: #4C6A2D;
+  }
+}
+@keyframes pulseText {
+  0% {
+    color: #a39280;
+  }
+  100% {
+    color: white;
+  }
+}
+@keyframes pulse2 {
+  0% {
+    background-color: #a39280;
+  }
+  100% {
+    background-color: #2a2e43;
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+body {
+  animation: fadein 0.5s;
+}
+.header-section {
+  background: #4C6A2D;
+  padding: 15px 50px;
+  border-bottom: 2px dashed #a39280;
+}
+.header-section header {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  color: white;
+}
+.header-section header .logo-text {
+  font-size: 4rem;
+  margin: auto;
+}
+.header-section header nav {
+  margin: auto;
+  padding: 0 10px 0 60px;
+}
+.header-section header nav a {
+  width: 200px;
+  padding: 10px 15px;
+  font-size: 1.1rem;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 0.05rem;
+}
+.header-section header nav a:hover {
+  animation: pulseText 2s;
+}
+.home-banner {
+  display: flex;
+  justify-content: center;
+}
+.home-banner img {
+  width: 90%;
+  height: auto;
+  padding-bottom: 15px;
+}
+.cta-section {
+  display: flex;
+  padding: 15px;
+  width: 85%;
+  margin: 0 auto;
+}
+.cta-section .cta-text {
+  padding: 20px;
+}
+.cta-section .cta-text h2 {
+  font-size: 2.5rem;
+}
+.cta-section .cta-text p {
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 10px 0;
+}
+.cta-section .home-cta-button {
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  background-color: #4C6A2D;
+  border-radius: 1.5rem;
+  padding: 15px 25px;
+  margin: 15px auto;
+  width: 200px;
+  text-align: center;
+}
+.cta-section .home-cta-button:hover {
+  animation: pulse 2s;
+}
+.cta-section .home-cta-button a {
+  text-decoration: none;
+  color: white;
+}
+.cta-section .cta-image img {
+  height: 450px;
+  border-radius: 1.5rem;
+}
+.tabs-section {
+  display: flex;
+  justify-content: center;
+  margin: 25px 15px 0 0;
+}
+.tabs-section .tab {
+  width: 250px;
+  padding: 20px 0px;
+  margin: 0 15px;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  background: #2a2e43;
+  color: white;
+}
+.tabs-section .tab:hover {
+  text-decoration: underline;
+  animation: pulse2 2s;
+  cursor: pointer;
+}
+address {
+  line-height: 1.5rem;
+}
+.card-hidden {
+  display: none;
+}
+.card .card-content {
+  animation: fadein 1s;
+  display: flex;
+  width: 75%;
+  border: solid black;
+  border-radius: 2rem;
+  padding: 25px;
+  margin: 25px auto;
+}
+.card .card-content img {
+  padding: 25px;
+  width: 500px;
+  border-radius: 1.5rem;
+}
+.card h3 {
+  font-size: 2rem;
+}
+.card p {
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 10px 0;
+}
+.card .card-button {
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  background-color: #4C6A2D;
+  border-radius: 1.5rem;
+  padding: 15px 0;
+  margin: 15px auto;
+  width: 175px;
+  text-align: center;
+}
+.card .card-button:hover {
+  animation: pulse 2s;
+}
+.card .card-button a {
+  text-decoration: none;
+  color: white;
+}
+.footer-section {
+  background: #4C6A2D;
+  margin: 0 auto;
+  display: flex;
+  color: white;
+  padding: 15px 0;
+  border-top: 2px dashed #a39280;
+}
+.footer-section footer {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 15px;
+  line-height: 1.5rem;
+}
+.footer-section footer .footer-nav {
+  display: flex;
+}
+.footer-section footer .footer-nav .footer-logo-text {
+  font-size: 2rem;
+}
+.footer-section footer .footer-nav nav {
+  margin: auto 0;
+  padding: 0 10px 0 60px;
+}
+.footer-section footer .footer-nav nav a {
+  padding: 0 15px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: white;
+  text-decoration: none;
+}
+.footer-section footer .footer-nav nav a:hover {
+  animation: pulseText 1s;
+}
+@media (max-width: 500px) and (max-width: 800px) {
+  .container {
+    width: 500px;
+  }
+  .container .header-section {
+    margin: 0;
+    padding: 15px 0 0;
+  }
+  .container header {
+    width: 100%;
+    display: block;
+  }
+  .container header .logo-image {
+    display: none;
+  }
+  .container header .logo-text {
+    text-align: center;
+    font-size: 2rem;
+  }
+  .container header nav {
+    padding: 0;
+    margin: 0;
+  }
+  .container header nav a {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 0;
+    border-top: 1px solid white;
+  }
+  .container .home-banner {
+    margin: 0;
+    width: 100%;
+  }
+  .container .home-banner img {
+    width: auto;
+    height: 250px;
+    margin: 0 auto;
+  }
+  .container .cta-section {
+    display: block;
+  }
+  .container .contact-image img {
+    width: 400px;
+    height: auto;
+    margin: 0 auto;
+  }
+  .container .tabs-section {
+    margin: 0 auto;
+  }
+  .container .tabs-section .tab {
+    text-decoration: underline;
+    font-size: 0.85rem;
+    padding: 12px;
+    margin: 0;
+  }
+  .container .card-content {
+    display: block;
+  }
+  .container .card-content img {
+    margin: 0 auto;
+    width: 100%;
+  }
+  .container .footer-section {
+    display: block;
+  }
+  .container .footer-section nav a {
+    display: none;
+  }
+}
