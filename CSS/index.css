@@ -142,13 +142,38 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: "Merriweather Sans", sans-serif;
+  font-family: "Fjalla One", sans-serif;
   letter-spacing: 1px;
   margin-bottom: 15px;
+}
+@keyframes pulse {
+  0% {
+    background-color: #a39280;
+  }
+  100% {
+    background-color: #4C6A2D;
+  }
+}
+@keyframes pulseText {
+  0% {
+    color: #a39280;
+  }
+  100% {
+    color: white;
+  }
+}
+@keyframes pulse2 {
+  0% {
+    background-color: #a39280;
+  }
+  100% {
+    background-color: #2a2e43;
+  }
 }
 .header-section {
   background: #4C6A2D;
   padding: 15px 50px;
+  border-bottom: 2px dashed #a39280;
 }
 .header-section header {
   width: 100%;
@@ -157,7 +182,7 @@ h5 {
   color: white;
 }
 .header-section header .logo-text {
-  font-size: 3rem;
+  font-size: 4rem;
   margin: auto;
 }
 .header-section header nav {
@@ -165,16 +190,18 @@ h5 {
   padding: 0 10px 0 60px;
 }
 .header-section header nav a {
-  padding: 0 15px;
+  width: 200px;
+  padding: 10px 15px;
   font-size: 1.1rem;
   color: white;
   text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 0.05rem;
 }
 .header-section header nav a:hover {
-  color: #a39280;
+  animation: pulseText 2s;
 }
 .home-banner {
-  border-top: 2px dashed #a39280;
   display: flex;
   justify-content: center;
 }
@@ -193,7 +220,7 @@ h5 {
   padding: 20px;
 }
 .cta-section .cta-text h2 {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
 }
 .cta-section .cta-text p {
   font-size: 1rem;
@@ -211,7 +238,7 @@ h5 {
   text-align: center;
 }
 .cta-section .home-cta-button:hover {
-  background-color: #a39280;
+  animation: pulse 2s;
 }
 .cta-section .home-cta-button a {
   text-decoration: none;
@@ -238,7 +265,7 @@ h5 {
 }
 .tabs-section .tab:hover {
   text-decoration: underline;
-  background: #a39280;
+  animation: pulse2 2s;
   cursor: pointer;
 }
 address {
@@ -260,8 +287,8 @@ address {
   width: 500px;
   border-radius: 1.5rem;
 }
-.card h2 {
-  font-size: 1.5rem;
+.card h3 {
+  font-size: 2rem;
 }
 .card p {
   font-size: 1rem;
@@ -279,7 +306,7 @@ address {
   text-align: center;
 }
 .card .card-button:hover {
-  background: #a39280;
+  animation: pulse 2s;
 }
 .card .card-button a {
   text-decoration: none;
@@ -311,12 +338,13 @@ address {
 }
 .footer-section footer .footer-nav nav a {
   padding: 0 15px;
+  font-weight: bold;
   font-size: 1.1rem;
   color: white;
   text-decoration: none;
 }
-@media (min-width: 800px) and (max-width: 1000px) {
-  background-color: red;
+.footer-section footer .footer-nav nav a:hover {
+  animation: pulseText 1s;
 }
 @media (max-width: 500px) and (max-width: 800px) {
   .container {
@@ -344,13 +372,11 @@ address {
   .container header nav a {
     display: block;
     width: 100%;
-    font-size: 1.25rem;
+    font-size: 1rem;
     text-align: center;
     padding: 10px 0;
+    border-radius: 0;
     border-top: 1px solid white;
-  }
-  .container header nav a:hover {
-    background: #a39280;
   }
   .container .home-banner {
     margin: 0;
@@ -364,7 +390,7 @@ address {
   .container .cta-section {
     display: block;
   }
-  .container #contact-image img {
+  .container .contact-image img {
     width: 400px;
     height: auto;
     margin: 0 auto;

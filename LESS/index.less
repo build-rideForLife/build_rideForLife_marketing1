@@ -147,7 +147,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: "Merriweather Sans", sans-serif;
+  font-family: "Fjalla One", sans-serif;
   letter-spacing: 1px;
   margin-bottom: 15px;
 }
@@ -159,41 +159,71 @@ h5 {
 @ebony-clay: #2a2e43;
 
 //ESCAPED VALUES
-// @mobile: ~"(min-width: 500px) and (max-width: 800px)";
 @mobile: ~"(max-width: 500px) and (max-width: 800px)";
-@tablet: ~"(min-width: 800px) and (max-width: 1000px)";
+// @tablet: ~"(min-width: 800px) and (max-width: 1000px)";
 
+
+//LINK ANIMATIONS
+@keyframes pulse {
+  0% {
+    background-color: @donkey-brown;
+  }
+  100% {
+    background-color: @woodland;
+  }
+}
+
+@keyframes pulseText {
+    0% {
+      color: @donkey-brown;
+    }
+    100% {
+      color: white;
+    }
+  }
+
+@keyframes pulse2 {
+    0% {
+      background-color: @donkey-brown;
+    }
+    100% {
+      background-color: @ebony-clay;
+    }
+  }
+
+
+//STYLES BEGIN HERE  
 
 .header-section {
   background: @woodland;
-  padding: 15px 50px;;
+  padding: 15px 50px;
+  border-bottom: 2px dashed @donkey-brown;
 
   header {
-    // border: solid red;
     width: 100%;
     margin: 0 auto;
     display: flex;
     color: white;
 
     .logo-text {
-      font-size: 3rem;
+      font-size: 4rem;
       margin: auto;
-      // border: solid blue;
     }
 
     nav {
-      // border: solid green;
       margin: auto;
       padding: 0 10px 0 60px;
 
       a {
-        // border: solid pink;
-        padding: 0 15px;
+        width: 200px;
+        padding: 10px 15px;
         font-size: 1.1rem;
         color: white;
         text-decoration: none;
+        font-weight: bold;
+        letter-spacing: 0.05rem;
         &:hover {
-            color: @donkey-brown;
+            animation: pulseText 2s;
         }
       }
     }
@@ -201,7 +231,6 @@ h5 {
 }
 
 .home-banner {
-  border-top: 2px dashed @donkey-brown;
   display: flex;
   justify-content: center;
 
@@ -213,18 +242,16 @@ h5 {
 }
 
 .cta-section {
-  // border: solid green;
   display: flex;
   padding: 15px;
   width: 85%;
   margin: 0 auto;
 
   .cta-text {
-    // border: solid orange;
     padding: 20px;
 
     h2 {
-      font-size: 1.5rem;
+      font-size: 2.5rem;
     }
     p {
       font-size: 1rem;
@@ -244,7 +271,7 @@ h5 {
     text-align: center;
 
     &:hover {
-      background-color: @donkey-brown;
+      animation: pulse 2s;
     }
 
     a {
@@ -278,31 +305,21 @@ h5 {
 
     &:hover {
       text-decoration: underline;
-      background: @donkey-brown;
+      animation: pulse2 2s;
       cursor: pointer;
     }
   }
 }
 
 address {
-    line-height: 1.5rem;
+  line-height: 1.5rem;
 }
-
-// #card {
-//     display: none;
-// }
-
-// .card-selected {
-//     display: block;
-// }
 
 .info-card {
-    
 }
 
-
 .card-hidden {
-    display: none;
+  display: none;
 }
 
 .card {
@@ -321,8 +338,8 @@ address {
     }
   }
 
-  h2 {
-    font-size: 1.5rem;
+  h3 {
+    font-size: 2rem;
   }
 
   p {
@@ -342,7 +359,7 @@ address {
     text-align: center;
 
     &:hover {
-      background: @donkey-brown;
+      animation: pulse 2s;
     }
 
     a {
@@ -379,24 +396,18 @@ address {
 
         a {
           padding: 0 15px;
+          font-weight: bold;
           font-size: 1.1rem;
           color: white;
           text-decoration: none;
+          &:hover {
+              animation: pulseText 1s;
+          }
         }
       }
     }
   }
 }
-
-
-// /* ************ TABLET STYLES 800px ************ */
-
-
-@media @tablet {
-    background-color: red;
-}
-
-
 
 // /* ************ MOBILE STYLES 500px ************ */
 
@@ -405,8 +416,8 @@ address {
     width: 500px;
 
     .header-section {
-        margin: 0;
-        padding: 15px 0 0;
+      margin: 0;
+      padding: 15px 0 0;
     }
 
     header {
@@ -429,21 +440,18 @@ address {
         a {
           display: block;
           width: 100%;
-          font-size: 1.25rem;
+          font-size: 1rem;
           text-align: center;
           padding: 10px 0;
+          border-radius: 0;
           border-top: 1px solid white;
-
-          &:hover {
-              background: @donkey-brown;
-          }
         }
       }
     }
 
     .home-banner {
-        margin: 0;
-        width: 100%;
+      margin: 0;
+      width: 100%;
       img {
         width: auto;
         height: 250px;
@@ -455,14 +463,12 @@ address {
       display: block;
     }
 
-    #contact-image {
-
-        img {
-            width: 400px;
-            height: auto;
-            margin: 0 auto;
-        }
-
+    .contact-image {
+      img {
+        width: 400px;
+        height: auto;
+        margin: 0 auto;
+      }
     }
 
     .tabs-section {
@@ -487,11 +493,9 @@ address {
 
     .footer-section {
       display: block;
-
       nav a {
         display: none;
       }
     }
   }
 }
-
