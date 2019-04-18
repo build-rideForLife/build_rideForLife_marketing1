@@ -147,7 +147,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: "Merriweather Sans", sans-serif;
+  font-family: "Fjalla One", sans-serif;
   letter-spacing: 1px;
   margin-bottom: 15px;
 }
@@ -166,7 +166,9 @@ h5 {
 
 .header-section {
   background: @woodland;
-  padding: 15px 50px;;
+  padding: 15px 50px;
+  border-bottom:2px dashed @donkey-brown;
+
 
   header {
     // border: solid red;
@@ -176,20 +178,17 @@ h5 {
     color: white;
 
     .logo-text {
-      font-size: 3rem;
+      font-size: 4rem;
       margin: auto;
-      // border: solid blue;
     }
 
     nav {
-      // border: solid green;
       margin: auto;
       padding: 0 10px 0 60px;
 
       a {
-        // border: solid pink;
         padding: 0 15px;
-        font-size: 1.1rem;
+        font-size: 1.25rem;
         color: white;
         text-decoration: none;
         &:hover {
@@ -201,7 +200,6 @@ h5 {
 }
 
 .home-banner {
-  border-top: 2px dashed @donkey-brown;
   display: flex;
   justify-content: center;
 
@@ -213,18 +211,16 @@ h5 {
 }
 
 .cta-section {
-  // border: solid green;
   display: flex;
   padding: 15px;
   width: 85%;
   margin: 0 auto;
 
   .cta-text {
-    // border: solid orange;
     padding: 20px;
 
     h2 {
-      font-size: 1.5rem;
+      font-size: 2.5rem;
     }
     p {
       font-size: 1rem;
@@ -321,8 +317,8 @@ address {
     }
   }
 
-  h2 {
-    font-size: 1.5rem;
+  h3 {
+    font-size: 2rem;
   }
 
   p {
@@ -389,6 +385,63 @@ address {
 }
 
 
+// @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+// @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+// @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+
+// #logo-animation {
+//     // background: blue;
+//     opacity:0;  /* make things invisible upon start */
+//     -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+//     -moz-animation:fadeIn ease-in 1;
+//     animation:fadeIn ease-in 1;
+  
+//     // -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+//     // -moz-animation-fill-mode:forwards;
+//     // animation-fill-mode:forwards;
+  
+//     -webkit-animation-duration:2s;
+//     -moz-animation-duration:2s;
+//     animation-duration:2s;
+// }
+
+
+
+// .fade-in {
+//   opacity:0;  /* make things invisible upon start */
+//   -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+//   -moz-animation:fadeIn ease-in 1;
+//   animation:fadeIn ease-in 1;
+
+//   -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+//   -moz-animation-fill-mode:forwards;
+//   animation-fill-mode:forwards;
+
+//   -webkit-animation-duration:1s;
+//   -moz-animation-duration:1s;
+//   animation-duration:1s;
+// }
+
+// #fade-in-card {
+//   -webkit-animation-delay: 0.7s;
+//   -moz-animation-delay: 0.7s;
+//   animation-delay: 0.7s;
+// }
+
+// .fade-in.two {
+//   -webkit-animation-delay: 1.2s;
+//   -moz-animation-delay:1.2s;
+//   animation-delay: 1.2s;
+// }
+
+// .fade-in.three {
+//   -webkit-animation-delay: 1.6s;
+//   -moz-animation-delay: 1.6s;
+//   animation-delay: 1.6s;
+// }
+
+
 // /* ************ TABLET STYLES 800px ************ */
 
 
@@ -436,6 +489,7 @@ address {
 
           &:hover {
               background: @donkey-brown;
+              color: white;
           }
         }
       }
