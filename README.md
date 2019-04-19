@@ -32,9 +32,9 @@ This app contains two user types. A ride requester (pregnant mom, or their careg
 
 ## Team Members and Roles
 
-Jacob Brennan, Team Lead
-Terrell Tullis, Back End Architect
-Max Trestman, Back End Architect
-Yi Lun Weng, Front End Architect
-Daisy Mesa, Web UI Developer
-Kimberlee Johnson, Web UI Developer
+* Jacob Brennan, Team Lead  
+* Terrell Tullis, Back End Architect  
+* Max Trestman, Back End Architect  
+* Yi Lun Weng, Front End Architect  
+* Daisy Mesa, Web UI Developer  
+* Kimberlee Johnson, Web UI Developer  
