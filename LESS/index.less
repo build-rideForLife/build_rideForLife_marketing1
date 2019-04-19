@@ -152,17 +152,21 @@ h5 {
   margin-bottom: 15px;
 }
 
-// COLORS
+
+//  VARIABLES 
+// ==============================================================
+
+// ********** COLORS VARIABLES **********
 @woodland : #4C6A2D;
 @donkey-brown: #a39280;
 @lynch: #78849e;
 @ebony-clay: #2a2e43;
 
-//ESCAPED VALUES
+// ********** ESCAPED VALUES **********
 @mobile: ~"(max-width: 500px) and (max-width: 800px)";
 // @tablet: ~"(min-width: 800px) and (max-width: 1000px)";
 
-//LINK/BUTTON ANIMATIONS
+// ********** LINK/BUTTON ANIMATIONS **********
 @keyframes pulse {
   0% {
     background-color: @donkey-brown;
@@ -190,7 +194,7 @@ h5 {
   }
 }
 
-//PAGE ANIMATIONS
+// ********** FADE-IN ANIMATIONS **********
 @keyframes fadein {
   from {
     opacity: 0;
@@ -204,7 +208,11 @@ body {
   animation: fadein 0.5s;
 }
 
-//MAIN STYLES BEGIN HERE
+
+//  MAIN STYLES BEGIN HERE
+// ==============================================================
+
+// ********** HEADER SECTION **********
 
 .header-section {
   background: @woodland;
@@ -253,6 +261,8 @@ body {
   }
 }
 
+// ********** CTA SECTION **********
+
 .cta-section {
   display: flex;
   padding: 15px;
@@ -300,6 +310,8 @@ body {
   }
 }
 
+// ********** TABS SECTION **********
+
 .tabs-section {
   display: flex;
   justify-content: center;
@@ -322,10 +334,11 @@ body {
     }
   }
 }
-
 address {
   line-height: 1.5rem;
 }
+
+// ********** CARD SECTION **********
 
 .info-card {
 }
@@ -382,6 +395,8 @@ address {
   }
 }
 
+// ********** FOOTER SECTION **********
+
 .footer-section {
   background: @woodland;
   margin: 0 auto;
@@ -414,7 +429,7 @@ address {
           color: white;
           text-decoration: none;
           &:hover {
-            animation: pulseText 1s;
+            animation: pulseText 2s;
           }
         }
       }
@@ -422,7 +437,9 @@ address {
   }
 }
 
-// /* ************ MOBILE STYLES 500px ************ */
+
+//  MOBILE VIEWS 500px
+// ==============================================================
 
 @media @mobile {
   .container {

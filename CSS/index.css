@@ -356,7 +356,7 @@ address {
   text-decoration: none;
 }
 .footer-section footer .footer-nav nav a:hover {
-  animation: pulseText 1s;
+  animation: pulseText 2s;
 }
 @media (max-width: 500px) and (max-width: 800px) {
   .container {
